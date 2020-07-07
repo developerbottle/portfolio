@@ -1,4 +1,3 @@
-const fs = require('fs');
 const path = require('path');
 const del = require('del');
 const browserSync = require('browser-sync').create();
@@ -9,8 +8,6 @@ const rename = require('gulp-rename');
 const postcss = require('gulp-postcss');
 const sourcemaps = require('gulp-sourcemaps');
 const cleanCSS = require('gulp-clean-css');
-const iconFont = require('gulp-iconfont');
-const iconFontCss = require('gulp-iconfont-css');
 const imagemin = require('gulp-imagemin');
 const gulpif = require('gulp-if');
 
