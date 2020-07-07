@@ -1,5 +1,5 @@
 module.exports = {
-  purge: ['./src/pages/index.hbs'],
+  purge: ['./src/**/*.hbs', './src/**/*.js'],
   target: 'relaxed',
   prefix: '',
   important: false,
