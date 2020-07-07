@@ -11,6 +11,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const cleanCSS = require('gulp-clean-css');
 const iconFont = require('gulp-iconfont');
 const iconFontCss = require('gulp-iconfont-css');
+const imagemin = require('gulp-imagemin');
 const gulpif = require('gulp-if');
 
 const IS_PRODUCTION_ENVIRONMENT = process.env.NODE_ENV === 'production';
@@ -55,6 +56,10 @@ const css = () => src('src/styles/**/*.css')
   .pipe(dest('build/styles/'))
   .pipe(gulpif(IS_DEVELOPMENT_ENVIRONMENT, browserSync.stream()));
 
+const images = () => src('src/images/**')
+  .pipe(gulpif(IS_PRODUCTION_ENVIRONMENT, imagemin()))
+  .pipe(dest('build/images'));
+
 const serve = () => {
   browserSync.init({
     server: './build/',
@@ -63,9 +68,10 @@ const serve = () => {
   watch(['src/styles/main.css', './tailwind.config.js'], css);
   watch(['src/pages/index.hbs', 'src/helpers/', 'src/partials/', 'src/icons/', 'src/data.json'], html).on('all', browserSync.reload);
   watch('public/', publicFolder).on('all', browserSync.reload);
+  watch('src/images/', images).on('all', browserSync.reload);
 };
 
 module.exports = {
-  default: series(clean, html, css, publicFolder, serve),
-  build: series(clean, parallel(html, css, publicFolder)),
+  default: series(clean, html, css, images, publicFolder, serve),
+  build: series(clean, parallel(html, css, images, publicFolder)),
 };
