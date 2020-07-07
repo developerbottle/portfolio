@@ -1,0 +1,29 @@
+{
+  "name": "shportfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "SHStorm <digitalsho19@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "cross-env NODE_ENV=\"development\" gulp",
+    "build": "cross-env NODE_ENV=\"production\" gulp build"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.8.4",
+    "browser-sync": "^2.26.7",
+    "cross-env": "^7.0.2",
+    "del": "^5.1.0",
+    "glob": "^7.1.6",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-compile-handlebars": "^0.6.1",
+    "gulp-iconfont": "^10.0.3",
+    "gulp-iconfont-css": "^3.0.0",
+    "gulp-if": "^3.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "tailwindcss": "^1.4.6"
+  }
+}

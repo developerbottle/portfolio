@@ -1,0 +1,12 @@
+@tailwind base;
+
+small {
+  font-size: inherit;
+}
+
+b {
+  font-weight: inherit;
+}
+
+@tailwind components;
+@tailwind utilities;

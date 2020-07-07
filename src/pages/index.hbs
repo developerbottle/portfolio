@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="/styles/icons.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap">
+</head>
+<body class="pt-10 pb-12 px-10 text-gray-100 bg-gray-900 lg:px-24 lg:py-16">
+  <header class="lg:grid lg:grid-cols-2">
+    <div class="md:text-center lg:text-left">
+      <h1 class="md:text-lg">
+        Hello, I'm <b class="font-bold">{{name}}.</b>
+        <br>I'm a <b class="font-bold">{{role}}</b> living in Tashkent.
+        <br><small class="font-thin">{{slogan}}</small>
+      </h1>
+      <a
+          class="inline-flex items-baseline mt-5 px-4 py-3 text-xs text-gray-900 bg-yellow-500 transition duration-150 hover:bg-yellow-400 active:bg-yellow-600 focus:outline-none focus:shadow-outline rounded md:text-sm"
+          href="/cv.pdf"
+          download="CV"
+      >
+        {{>icon name="file-text"}}
+        <span class="ml-1">Download CV</span>
+      </a>
+    </div>
+    <ul class="grid gap-3 w-full max-w-xs mt-8 -ml-3 sm:grid-cols-2 sm:max-w-none lg:grid-cols-2 lg:mt-0 lg:content-center lg:justify-center lg:gap-2 lg:text-right">
+      {{#each contacts}}
+        <li>{{>contact}}</li>
+      {{/each}}
+    </ul>
+  </header>
+
+  <main class="mt-10">
+    <section>
+      <h2 class="font-thin md:text-center md:text-lg lg:text-left">My works</h2>
+      <ul class="mt-6 grid sm:grid-cols-2 gap-10 xl:grid-cols-3">
+        {{#each projects}}
+          <li>{{>project}}</li>
+        {{/each}}
+      </ul>
+
+      <div class="mt-10 md:text-center">
+        <a
+            class="px-3 py-2 font-thin text-xs text-yellow-500 rounded border-2 border-yellow-500 transition duration-150 hover:text-gray-900 hover:bg-yellow-500 md:text-sm"
+            href="{{reposHoster.accountUrl}}"
+            target="_blank"
+        >
+          {{>icon name="github"}}
+          <span class="ml-1">See others on {{reposHoster.name}}</span>
+        </a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

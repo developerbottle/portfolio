@@ -1,0 +1,88 @@
+{
+  "name": "Shoaziz",
+  "role": "front-end developer",
+  "location": "Tashkent",
+  "slogan": "Building beautiful & functional websites.",
+  "contacts": [
+    {
+      "icon": {
+        "name": "email",
+        "alt": "E-mail: "
+      },
+      "value": "mailto:developerbottle@gmail.com",
+      "display": "developerbottle@gmail.com"
+    },
+    {
+      "icon": {
+        "name": "phone",
+        "alt": "Phone number: "
+      },
+      "value": "tel:+998997979293",
+      "display": "+998 99 797 92 93"
+    },
+    {
+      "icon": {
+        "name": "telegram",
+        "alt": "Telegram account: "
+      },
+      "value": "https://t.me/developerbottle",
+      "display": "@developerbottle"
+    },
+    {
+      "icon": {
+        "name": "github",
+        "alt": "GitHub account: "
+      },
+      "value": "https://github.com/developerbottle",
+      "display": "@developerbottle"
+    }
+  ],
+  "projects": [
+    {
+      "preview": "/images/projects/indecision.jpg",
+      "name": "Indecision app",
+      "usedTech": ["Webpack", "Babel", "React"],
+      "liveUrl": "https://indecision.vercel.app/",
+      "codeUrl": "https://github.com/developerbottle/indecision"
+    },
+    {
+      "preview": "/images/projects/notes.jpg",
+      "name": "Notes app",
+      "usedTech": ["HTML", "Webpack", "Vanilla JS"],
+      "liveUrl": "https://notes-app-pi.vercel.app/",
+      "codeUrl": "https://github.com/developerbottle/notes-app"
+    },
+    {
+      "preview": "/images/projects/huddle-landing.jpg",
+      "name": "Huddle landing page",
+      "usedTech": ["HTML", "CSS"],
+      "liveUrl": "https://fem-huddle-alternating-feature-blocks.vercel.app/",
+      "codeUrl": "https://github.com/developerbottle/fem-huddle-alternating-feature-blocks"
+    },
+    {
+      "preview": "/images/projects/expense-tracker.jpg",
+      "name": "Expense tracker app",
+      "usedTech": ["HTML", "CSS", "Vanilla JS"],
+      "liveUrl": "https://expense-tracker-pi.vercel.app/",
+      "codeUrl": "https://github.com/developerbottle/expense-tracker"
+    },
+    {
+      "preview": "/images/projects/chatter.jpg",
+      "name": "Chatter app",
+      "usedTech": ["NodeJS", "Express", "Socket.io"],
+      "liveUrl": "https://chatter-pi.vercel.app/",
+      "codeUrl": "https://github.com/developerbottle/chatter"
+    },
+    {
+      "preview": "/images/projects/home-signup.jpg",
+      "name": "Home page | Sign-up form",
+      "usedTech": ["HTML", "CSS"],
+      "liveUrl": "https://fem-intro-component-with-signup-form.vercel.app/",
+      "codeUrl": "https://github.com/developerbottle/fem-intro-component-with-signup-form"
+    }
+  ],
+  "reposHoster": {
+    "name": "GitHub",
+    "accountUrl": "https://github.com/developerbottle"
+  }
+}
