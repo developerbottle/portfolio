@@ -1,5 +1,5 @@
 {{#if alt}}
-  <span><span aria-hidden="true">{{{fetch-icon-svg name}}}</span><span class="sr-only">{{alt}}</span></span>
+  <span class="inline-flex">{{>pure-icon name=name}}<span class="sr-only">{{alt}}</span></span>
 {{else}}
-  <span aria-hidden="true">{{{fetch-icon-svg name}}}</span>
+  {{>pure-icon name=name}}
 {{/if}}

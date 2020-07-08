@@ -10,9 +10,9 @@
           class="absolute inset-0 bg-gray-900 bg-opacity-0 opacity-0 transition duration-150 group-hover:bg-opacity-50 group-hover:opacity-100"
       >
         <div
-            class="absolute bottom-0 right-0 px-6 py-2 bg-white text-gray-900 transform scale-0 origin-bottom-right transition duration-150 group-hover:scale-100"
+            class="inline-flex items-center absolute bottom-0 right-0 px-6 py-2 bg-white text-gray-900 transform scale-0 origin-bottom-right transition duration-150 group-hover:scale-100"
         >
-          <span class="mr-1">Live preview</span>
+          <span class="mr-2">Live preview</span>
           {{>icon name="external-link"}}
         </div>
       </div>
@@ -32,14 +32,14 @@
   </ul>
   <div class="flex mt-3 font-thin text-xs md:text-sm">
     <a
-        class="transition duration-150 hover:text-yellow-500 focus:outline-none focus:text-yellow-500"
+        class="inline-flex items-center transition duration-150 hover:text-yellow-500 focus:outline-none focus:text-yellow-500"
         href="{{liveUrl}}"
         target="_blank"
     >
       {{>icon name="eye"}}
       <span class="ml-1">Live preview</span>
     </a>
-    <a class="ml-6 transition duration-150 hover:text-yellow-500 focus:outline-none focus:text-yellow-500"
+    <a class="inline-flex items-center ml-6 transition duration-150 hover:text-yellow-500 focus:outline-none focus:text-yellow-500"
        href="{{codeUrl}}" target="_blank">
       {{>icon name="code"}}
       <span>View code</span>
