@@ -10,3 +10,9 @@ b {
 
 @tailwind components;
 @tailwind utilities;
+
+@variants hover, group-hover {
+  .blur {
+    filter: blur(4px);
+  }
+}

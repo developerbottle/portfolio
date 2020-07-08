@@ -1,7 +1,23 @@
 <div>
-  <div class="relative pb-2/3 shadow-inner">
-    <img class="absolute w-full h-full object-cover" src="{{preview}}" alt="">
-  </div>
+  <a class="group" href="{{liveUrl}}" target="_blank">
+    <div class="relative pb-2/3 overflow-hidden">
+      <img
+          class="absolute inset-0 object-cover transition-all duration-150 transform group-hover:blur group-hover:scale-105"
+          src="{{preview}}"
+          alt=""
+      >
+      <div
+          class="absolute inset-0 bg-gray-900 bg-opacity-0 opacity-0 transition duration-150 group-hover:bg-opacity-50 group-hover:opacity-100"
+      >
+        <div
+            class="absolute bottom-0 right-0 px-6 py-2 bg-white text-gray-900 transform scale-0 origin-bottom-right transition duration-150 group-hover:scale-100"
+        >
+          <span class="mr-1">Live preview</span>
+          {{>icon name="external-link"}}
+        </div>
+      </div>
+    </div>
+  </a>
   <b class="block mt-4 font-bold text-sm capitalize md:text-base">{{name}}</b>
   <ul class="flex mt-1 font-thin text-2xs md:text-xs">
     {{#each usedTech}}
